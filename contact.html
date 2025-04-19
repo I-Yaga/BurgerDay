@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - BurgerDay</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="header" id="headerTop">
+        <div class="container">
+            <div class="header-wrapper">
+                <button class="burger-menu" onclick="openModal()"></button>
+                <div class="logotype">
+                    <a href="#" class="logo"></a>
+                    <a href="#" class="logo-text">BURGER<span class="logo-text logo-span">DAY</span></a>
+                </div>
+                <nav class="nav">
+                    <a href="#" class="nav-link">Главная</a>
+                    <a href="index.html" class="nav-link">Меню</a>
+                    <a href="#" class="nav-link">О нас</a>
+                    <a href="contact.html" class="nav-link">Контакты</a>
+                </nav>
+                <a class="cart" href="#">1250₽ <span class="cart-count">5</span></a>
+                <!-- <div class="user-info">
+                    
+                    <a href="#" class="user"></a>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <section class="hero hero-contact">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Главная</a></li>
+                <li class="breadcrumbs-item">Контакты</li>
+            </ul>
+            <h1 class="hero-title">Контакты</h1>
+            <p class="hero-description">Узнай, в каком городе мы работаем, чтобы забрать заказ самостоятельно</p>
+        </div>
+    </section>
+    <main>
+        <div class="container">
+            <div class="contact">
+                <div class="contact-main">
+                    <iframe class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac185bc54807f23f76f684be8e7baf91f970f790ca6d9cb8cbef81c8834d06ccd&amp;source=constructor" frameborder="0"></iframe>
+                    <ul class="adresses">
+                        <li class="contact-list">
+                            <h3 class="city">Москва</h3>
+                            <span class="adress">пер. Плотников 22, стр. 3</span><br>
+                            <span class="delivery">Бесплатная доставка</span>
+                        </li>
+                        <li class="contact-list">
+                            <h3 class="city">Екатеринбург</h3>
+                            <span class="contact-span">ул. Малышева 111б</span><br>
+                            <span class="delivery">Бесплатная доставка от $50</span>
+                        </li>
+                        <li class="contact-list">
+                            <h3 class="city">Казань</h3>
+                            <span class="contact-span">ул. Профсоюзная 156, корп. 1</span><br>
+                            <span class="delivery">Бесплатная доставка от $100</span>
+                        </li>
+                        <li class="contact-list">
+                            <h3 class="city">Самара</h3>
+                            <span class="contact-span">ул. Рабочий городок д.6, стр. 12</span><br>
+                            <span class="delivery">Бесплатная доставка от $150</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-second">
+                    <div class="contact-second-item">
+                        <img src="images/contact/time.svg" alt="">
+                        <ul class="contact-second-ul">
+                            <li class="contact-span">Время работы</li>
+                            <li class="contact-second-info">ПН - ПТ <br>11:00 - 00:00</li>
+                        </ul>
+                    </div>
+                    <div class="contact-second-item">
+                        <img src="images/contact/phone.svg" alt="">
+                        <ul class="contact-second-ul">
+                            <li class="contact-span">Телефоны</li>
+                            <li class="contact-second-info">+ 7 900 787 13-13
+                                <br>+ 7 900 787 14-14</li>
+                        </ul>
+                    </div>
+                    <div class="contact-second-item">
+                        <img src="images/contact/map-mark.svg" alt="">
+                        <ul class="contact-second-ul">
+                            <li class="contact-span">Отдел качества</li>
+                            <li class="contact-second-info">Москва, 103274<br>ул. Бажова , 58</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <a href="#" class="footer-logo"></a>
+                <div class="footer-item">
+                    <h3 class="footer-title">Основные ссылки</h3>
+                    <nav class="footer-nav">
+                        <a class="footer-nav-link" href="index.html">Меню</a><br>
+                        <a class="footer-nav-link" href="#">Заказ и Доставка</a><br>
+                        <a class="footer-nav-link" href="#">Методы оплаты</a><br>
+                        <a class="footer-nav-link" href="contact.html">Контакты</a>
+                    </nav>
+                    <a class="footer-tel _mobile" href="tel:+79007871313">+ 7 900 787 13-13</a>
+                    <a class="footer-tel _mobile" href="tel:+79007001414">+ 7 900 700 14-14</a>
+                </div>
+                <div class="footer-item">
+                    <h3 class="footer-title">Основная информация</h3>
+                    <ul class="footer-list">
+                        <li>
+                            <span class="footer-span">Время</span><br>
+                            ПН - ВС<br>
+                            11:00 - 22:00 без перерывов
+                        </li> 
+                        <li>
+                            <span class="footer-span">Адрес</span><br>
+                            Москва, ул. Тверская, 5
+                        </li> 
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <a class="footer-tel" href="tel:+79007871313">+ 7 900 787 13-13</a>
+                    <a class="footer-tel" href="tel:+79007001414">+ 7 900 700 14-14</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#headerTop" class="button-up hidden" id="btnUp">Наверх</a>
+    <div class="modal" id="modal">
+        <nav class="nav _modal">
+            <a href="#" class="nav-link">Главная</a>
+            <a href="index.html" class="nav-link">Меню</a>
+            <a href="#" class="nav-link">О нас</a>
+            <a href="contact.html" class="nav-link">Контакты</a>
+        </nav>
+        <button class="modal-close" onclick="closeModal()"></button>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

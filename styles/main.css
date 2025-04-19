@@ -7,7 +7,7 @@
   --dark: #443737;
   --light: #ffffff;
   --light-rgb: 255, 255, 255;
-  --line: #dedede;
+  --txt-light: #dedede;
 
   --tr: 0.5s;
 }
@@ -29,11 +29,20 @@ a {
   box-sizing: border-box;
 }
 
-/* Header */
+/* Dark-theme */
 
-.header {
-  border-bottom: 1px solid var(--line);
+.dark-theme {
+  background-color: #1a1a1a;
 }
+
+.dark-theme p,
+.dark-theme a,
+.dark-theme h2,
+.dark-theme h3 {
+  color: var(--txt-light);
+}
+
+/* Header */
 
 .header-wrapper {
   display: flex;
@@ -85,7 +94,6 @@ a {
   flex-grow: 1;
   display: flex;
   gap: 47px;
-  margin-left: min(6vw, 140px);
 }
 
 .nav-link {
@@ -106,6 +114,31 @@ a {
 
 .nav-link:hover::after {
   background-color: var(--accent-light);
+}
+
+.theme-button {
+  display: flex;
+  gap: 5px;
+  border: none;
+  background-color: var(--accent-light);
+  border-radius: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: var(--tr);
+  font-size: 14px;
+}
+
+.theme-button:hover {
+  background-color: var(--accent-dark);
+}
+
+.theme-button::before {
+  content: '';
+  background-image: url(../images/moon-normal.svg);
+  display: block;
+  width: 15px;
+  height: 15px;
+  color: var(--dark);
 }
 
 .cart {
@@ -368,7 +401,7 @@ a {
   background-size: 14px 10px;
   background-repeat: no-repeat;
   background-position: 89% center;
-  border: 1px solid var(--line);
+  border: 1px solid var(--txt-light);
   padding: 13px 30px;
   border-radius: 22px;
 }

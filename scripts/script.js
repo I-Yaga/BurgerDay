@@ -52,3 +52,11 @@ function closeModal() {
     document.getElementById("modal").style.top = "-400px";
 }
 
+// Themes
+
+let page = document.querySelector('body');
+let themeButton = document.querySelector('.theme-button');
+
+themeButton.onclick = function() {
+  page.classList.toggle('dark-theme');
+};

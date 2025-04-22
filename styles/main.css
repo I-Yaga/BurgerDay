@@ -14,6 +14,7 @@
 
 body {
   font-family: var(--open-sans);
+  transition: var(--tr);
 }
 
 a {
@@ -29,7 +30,11 @@ a {
   box-sizing: border-box;
 }
 
-/* Dark-theme */
+/* themes */
+
+.light-theme {
+  background-color: #fff;
+}
 
 .dark-theme {
   background-color: #1a1a1a;
@@ -38,16 +43,42 @@ a {
 .dark-theme p,
 .dark-theme a,
 .dark-theme h2,
-.dark-theme h3 {
+.dark-theme h3,
+.dark-theme span,
+.dark-theme li {
+  color: var(--txt-light);
+}
+
+.dark-theme .footer-tel {
+  color: var(--accent-light);
+}
+
+.dark-theme .logo {
+  background-image: url(../images/Logo_min.svg);
+}
+
+.dark-theme .logo-span {
+  color: var(--accent-light);
+}
+
+.dark-theme .menu-select {
+  background-color: #1a1a1a;
   color: var(--txt-light);
 }
 
 /* Header */
 
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: inherit;
+  z-index: 100;
+}
+
 .header-wrapper {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   gap: 56px;
   padding-top: 26px;
   padding-bottom: 26px;
@@ -93,6 +124,7 @@ a {
 .nav {
   flex-grow: 1;
   display: flex;
+  justify-content: center;
   gap: 47px;
 }
 
@@ -116,13 +148,19 @@ a {
   background-color: var(--accent-light);
 }
 
+.header-left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 .theme-button {
   display: flex;
   gap: 5px;
   border: none;
   background-color: var(--accent-light);
   border-radius: 5px;
-  padding: 10px 10px;
+  padding: 10px;
   cursor: pointer;
   transition: var(--tr);
   font-size: 14px;
@@ -144,7 +182,6 @@ a {
 .cart {
   display: flex;
   align-items: center;
-  gap: 10px;
   color: var(--dark);
   font-weight: 700;
   font-size: 15px;
@@ -176,18 +213,12 @@ a {
   bottom: 0px;
 }
 
-.user-info {
-  display: flex;
-  gap: 25px;
-}
-
-.user {
-  content: "";
-  background-image: url(../images/user.svg);
-  width: 30px;
-  height: 30px;
-  background-repeat: no-repeat;
-  background-size: contain;
+.login {
+  font-weight: 600;
+  color: var(--dark);
+  padding: 10px 15px;
+  border: 1px solid var(--dark);
+  border-radius: 5px;
 }
 
 .button-up {
@@ -444,6 +475,7 @@ a {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
+  z-index: -1;
 }
 
 .menu-thumb img {
@@ -682,8 +714,57 @@ a {
   line-height: 28px;
 }
 
-.modal {
+.header-modal {
     display: none;
+}
+
+/* Стили для модального окна */
+
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  justify-content: center;
+  align-items: flex-start; /* Выравнивание контента сверху */
+  z-index: 1000;
+  overflow: auto; /* Для прокрутки, если контент длинный */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: auto auto;
+  opacity: 0; /* Начальная непрозрачность */
+  transform: translateY(-100px); /* Начальное положение выше */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Плавная анимация */
+}
+
+/* Класс для активного состояния */
+.modal.active .modal-content {
+  opacity: 1;
+  transform: translateY(0); /* Появление на месте */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: #ff0000;
 }
 
 /* Media */
@@ -715,7 +796,7 @@ a {
     display: flex;
     flex-direction: column;
   }
-  .modal {
+  .header-modal {
     display: block;
     width: 100%;
     background-color: #fff8dc;
@@ -732,7 +813,7 @@ a {
   .nav-link::after {
     display: none;
   }
-  .modal-close {
+  .header-modal-close {
     display: block;
     width: 22px;
     height: 22px;
@@ -828,7 +909,7 @@ a {
     width: 55px;
     height: 37px;
   }
-  .modal {
+  .header-modal {
     display: block;
     width: 100%;
     background-color: #fff8dc;
@@ -845,7 +926,7 @@ a {
   .nav-link::after {
     display: none;
   }
-  .modal-close {
+  .header-modal-close {
     display: block;
     width: 22px;
     height: 22px;

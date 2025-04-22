@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/normalize.min.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body class="light-theme">
     <header class="header" id="headerTop">
         <div class="container">
             <div class="header-wrapper">
@@ -27,11 +27,11 @@
                     <a href="#" class="nav-link">О нас</a>
                     <a href="contact.html" class="nav-link">Контакты</a>
                 </nav>
-                <a class="cart" href="#">1250₽ <span class="cart-count">5</span></a>
-                <!-- <div class="user-info">
-                    
-                    <a href="#" class="user"></a>
-                </div> -->
+                <div class="header-left">
+                    <button type="button" class="theme-button"></button>
+                    <a class="cart" href="#"><span class="cart-count">5</span></a>
+                    <a href="#" class="login">Войти</a>
+                </div>
             </div>
         </div>
     </header>
@@ -53,7 +53,7 @@
                     <ul class="adresses">
                         <li class="contact-list">
                             <h3 class="city">Москва</h3>
-                            <span class="adress">пер. Плотников 22, стр. 3</span><br>
+                            <span class="contact-span">пер. Плотников 22, стр. 3</span><br>
                             <span class="delivery">Бесплатная доставка</span>
                         </li>
                         <li class="contact-list">
@@ -137,7 +137,7 @@
         </div>
     </footer>
     <a href="#headerTop" class="button-up hidden" id="btnUp">Наверх</a>
-    <div class="modal" id="modal">
+    <div class="header-modal" id="modal">
         <nav class="nav _modal">
             <a href="#" class="nav-link">Главная</a>
             <a href="index.html" class="nav-link">Меню</a>

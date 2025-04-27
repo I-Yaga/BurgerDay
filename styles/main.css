@@ -66,6 +66,10 @@ a {
   color: var(--txt-light);
 }
 
+.dark-theme .button-up {
+  color: var(--dark);
+}
+
 /* Header */
 
 .header {
@@ -74,6 +78,7 @@ a {
   width: 100%;
   background-color: inherit;
   z-index: 100;
+  border-bottom: 1px solid var(--txt-light);
 }
 
 .header-wrapper {
@@ -213,12 +218,19 @@ a {
   bottom: 0px;
 }
 
-.login {
+.login-btn {
   font-weight: 600;
   color: var(--dark);
   padding: 10px 15px;
   border: 1px solid var(--dark);
   border-radius: 5px;
+  cursor: pointer;
+  transition: var(--tr);
+  background-color: var(--accent-light);
+}
+
+.login-btn:hover {
+  background-color: var(--accent-dark);
 }
 
 .button-up {
@@ -735,6 +747,8 @@ a {
 }
 
 .modal-content {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -743,15 +757,14 @@ a {
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin: auto auto;
-  opacity: 0; /* Начальная непрозрачность */
-  transform: translateY(-100px); /* Начальное положение выше */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Плавная анимация */
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Класс для активного состояния */
 .modal.active .modal-content {
   opacity: 1;
-  transform: translateY(0); /* Появление на месте */
+  transform: translateY(0);
 }
 
 .close-btn {
@@ -765,6 +778,15 @@ a {
 
 .close-btn:hover {
   color: #ff0000;
+}
+
+.input-login {
+  box-sizing: border-box;
+  border: 1px solid var(--dark);
+  border-radius: 5px;
+  margin-top: 20px;
+  height: 40px;
+  padding-left: 10px;
 }
 
 /* Media */

@@ -26,10 +26,10 @@ for (const upbutton of upbuttons) {
 }
 
 function clickHandler(e) {
-e.preventDefault();
-const href = this.getAttribute("href");
+  e.preventDefault();
+  const href = this.getAttribute("href");
 
-document.querySelector(href).scrollIntoView({
+  document.querySelector(href).scrollIntoView({
     behavior: "smooth"
 });
 }
@@ -66,7 +66,7 @@ themeButton.onclick = function() {
 
 // Получаем элементы
 const modal = document.getElementById('myModal');
-const openBtn = document.querySelector('.open-modal-btn');
+const openBtn = document.querySelector('.login-btn');
 const closeBtn = document.querySelector('.close-btn');
 
 // Открытие модального окна
@@ -74,7 +74,7 @@ openBtn.addEventListener('click', () => {
   modal.style.display = 'flex';
   setTimeout(() => {
     modal.classList.add('active');
-  }, 10); // Небольшая задержка для срабатывания transition
+  }, 10);
 });
 
 // Закрытие модального окна по клику на крестик

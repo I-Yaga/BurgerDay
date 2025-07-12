@@ -12,6 +12,11 @@
   --tr: 0.5s;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--open-sans);
   transition: var(--tr);
@@ -69,6 +74,8 @@ a {
 .dark-theme .button-up {
   color: var(--dark);
 }
+
+/* Menu */
 
 /* Header */
 
@@ -303,7 +310,6 @@ a {
   font-family: var(--nunito-sans);
   font-size: 79px;
   font-weight: 700;
-  text-transform: capitalize;
   margin-top: 20px;
   margin-bottom: 18px;
 }
@@ -1015,4 +1021,49 @@ a {
   .logo {
     display: none;
   }
+}
+
+/* Main page */
+
+.hero-main {
+  background-image: url(../images/hero-main.jpg);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hero-main-blackout {
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 240px;
+  padding-top: 142px;
+  padding-bottom: 142px;
+}
+
+.hero-main-a {
+  margin-top: 50px;
+  background-color: var(--accent-light);
+  text-align: center;
+  border-width: 1px;
+  border-color: var(--accent-light);
+  padding: 20px 25px;
+  border-radius: 5px;
+  border-style: solid;
+  color: rgb(68, 55, 55);
+  font-family: var(--nunito-sans);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: var(--tr);
+}
+
+.hero-main-a:hover {
+  background: none;
+  cursor: pointer;
+  color: var(--accent-light);
+}
+
+.hero-main-description {
+  margin-bottom: 50px;
 }

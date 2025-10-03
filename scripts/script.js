@@ -1,4 +1,4 @@
-// Smooth Scroll
+// Плавная прокрутка из рекламного баннера к меню
       
 const links = document.querySelectorAll(".banner-btn");
 
@@ -15,7 +15,7 @@ document.querySelector(href).scrollIntoView({
 });
 }
 
-// Button Up
+// Кнопка вверх
 
 window.onscroll = function(){scrollFunction()};
 
@@ -42,7 +42,7 @@ function scrollFunction(){
     }
 }
 
- // Menu
+ // Модальное меню на мобильных устройствах
 
  function openModal() {
     const div = document.createElement('div');
@@ -59,12 +59,19 @@ function closeModal() {
     div.parentNode.removeChild(div);
 }
 
-// Themes
+// Корзина
 
-let page = document.querySelector('body');
-let themeButton = document.querySelector('.theme-button');
+function openCartMenu() {
+    const div = document.createElement('div');
+    document.getElementById("cartMenu").style.right = "0px";
+    document.body.classList.add('no-scroll');
+    div.classList.add('menuLayout');
+    document.body.appendChild(div);
+}
 
-themeButton.onclick = function() {
-  page.classList.toggle('dark-theme');
-  page.classList.toggle('light-theme');
-};
+function closeCartMenu() {
+    const div = document.querySelector('.menuLayout');
+    document.getElementById("cartMenu").style.right = "-100vw";
+    document.body.classList.remove('no-scroll');
+    div.parentNode.removeChild(div);
+}
